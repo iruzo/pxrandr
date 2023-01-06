@@ -1,5 +1,5 @@
 cachedir="$HOME/.cache/autoxrandr"
-mkdir $cachedir
+mkdir -p $cachedir
 xrandr | grep -oP '.*(?= connected .*)' > $cachedir/connectedMonitorsNames.txt
 xrandr | grep -oP '[0-9]+x[0-9].*(?= +[0-9]*\..*\+)' > $cachedir/connectedMonitorsMaxRes.txt
 sed -iP 's/[0-9]*\..*//g' $cachedir/connectedMonitorsMaxRes.txt
