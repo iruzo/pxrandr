@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cachedir="$HOME/.cache/autoxrandr"
 mkdir -p $cachedir
 xrandr | grep -oP '.*(?= connected .*)' > $cachedir/connectedMonitorsNames.txt
