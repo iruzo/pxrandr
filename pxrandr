@@ -8,7 +8,6 @@ sed -iP 's/[0-9]*\..*//g' $cachedir/connectedMonitorsMaxRes.txt
 
 posx=0
 script="xrandr"
-i=1
 for i in $(wc -l < $cachedir/connectedMonitorsNames.txt); do
     name=$(head -n $i $cachedir/connectedMonitorsNames.txt | tail -n +$i)
     res=$(head -n $i $cachedir/connectedMonitorsMaxRes.txt | tail -n +$i)
